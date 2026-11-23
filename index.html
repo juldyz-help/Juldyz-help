@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Помощь Жұлдыз Алжановой</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #fff5f8;
+  color: #333;
+  text-align: center;
+}
+
+.container {
+  max-width: 480px;
+  margin: auto;
+}
+
+h1 {
+  color: #c2185b;
+  font-size: 28px;
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  margin: 18px 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.bank {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.number {
+  font-size: 20px;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+button {
+  width: 100%;
+  background: #c2185b;
+  color: white;
+  border: none;
+  padding: 15px;
+  margin-top: 12px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  background: #880e4f;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>❤️ Помощь Жұлдыз</h1>
+
+<p class="subtitle">
+Жұлдыз Алжанова, 29 лет.<br>
+Синовиальная саркома IV стадии.<br>
+Необходимо продолжение лечения в Южной Корее.
+</p>
+
+<p class="subtitle">
+Спасибо каждому, кто поддерживает Жұлдыз
+на её непростом пути!
+</p>
+
+<div class="card">
+  <div class="bank">🟠 KASPI GOLD</div>
+  <div class="number">8 707 511 27 96</div>
+
+  <button onclick="copyText('87075112796', this)">
+    📋 Скопировать номер
+  </button>
+
+  <p>Номер карты:</p>
+  <div class="number">4400 4302 7555 4316</div>
+
+  <button onclick="copyText('4400430275554316', this)">
+    📋 Скопировать карту
+  </button>
+</div>
+
+<div class="card">
+  <div class="bank">🟢 HALYK BANK</div>
+  <div class="number">8 707 511 27 96</div>
+
+  <button onclick="copyText('87075112796', this)">
+    📋 Скопировать номер
+  </button>
+
+  <p>Номер карты:</p>
+  <div class="number">4405 6397 1189 6868</div>
+
+  <button onclick="copyText('4405639711896868', this)">
+    📋 Скопировать карту
+  </button>
+</div>
+
+<div class="card">
+  <div class="bank">🌍 PAYPAL</div>
+  <div class="number">zalzanova19@gmail.com</div>
+
+  <button onclick="copyText('zalzanova19@gmail.com', this)">
+    📋 Скопировать PayPal
+  </button>
+</div>
+
+<div class="footer">
+  ❤️ Даже небольшая помощь имеет значение.
+  <br><br>
+  Спасибо за вашу доброту и поддержку!
+  <br><br>
+  Получатель: Жұлдыз Алжанова
+</div>
+
+</div>
+
+<script>
+async function copyText(value, button) {
+  try {
+    await navigator.clipboard.writeText(value);
+    button.innerText = "✅ Скопировано!";
+  } catch (error) {
+    const input = document.createElement("textarea");
+    input.value = value;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand("copy");
+    document.body.removeChild(input);
+    button.innerText = "✅ Скопировано!";
+  }
+
+  setTimeout(function() {
+    button.innerText = "📋 Скопировать";
+  }, 2000);
+}
+</script>
+
+</body>
+</html>
